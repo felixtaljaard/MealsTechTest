@@ -42,6 +42,7 @@ android {
 dependencies {
 
 
+    testImplementation 'org.junit.jupiter:junit-jupiter'
     def coroutinesVersion = '1.4.3'
     def retrofitVersion = "2.9.0"
     def lifeCycleVersion = '2.2.0'
@@ -170,5 +171,8 @@ dependencies {
     annotationProcessor("androidx.hilt:hilt-compiler:1.0.0")
 
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.9.1'
+
+    testImplementation 'org.mockito:mockito-inline:{mockitoversion}'
+    testImplementation 'org.mockito:mockito-junit-jupiter:{mockitoversion}'
 
 }

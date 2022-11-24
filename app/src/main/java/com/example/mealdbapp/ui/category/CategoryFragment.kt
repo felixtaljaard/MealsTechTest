@@ -22,8 +22,6 @@ class CategoryFragment : Fragment() {
     private val viewModel: CategoryViewModel by viewModels()
     private lateinit var adapter: CategoryAdapter
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -48,11 +46,6 @@ class CategoryFragment : Fragment() {
                     "Category",
                     it.strCategory
                 )
-
-//                findNavController().navigate(
-//                    R.id.action_navigation_category_to_mealsFragment,
-//                    bundle
-//                )
             }
         )
 
