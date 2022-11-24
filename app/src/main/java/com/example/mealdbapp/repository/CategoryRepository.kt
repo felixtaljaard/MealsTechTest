@@ -14,10 +14,4 @@ class CategoryRepository @Inject constructor(
         networkCall = { remoteDataSource.getCategories() },
         saveCallResult = { localDataSource.insertAllCategories(it.categories) }
     )
-
-    fun getMealsDetails(category: String) = performGetOperation(
-        databaseQuery = { localDataSource.getMeal(category) },
-        networkCall = { remoteDataSource.getMeals(category) },
-        saveCallResult = { localDataSource.insertAllMeals(it.meals) }
-    )
 }

@@ -38,10 +38,4 @@ class CategoryRepositoryTest {
        repository.getCategories().observeForever(charactersObserver)
        verify { charactersObserver.onChanged(any()) }
     }
-
-    @Test
-    fun `get meals detail should return livedata of single category data`(){
-        repository.getMealsDetails("1").observeForever(charactersObserverDetail)
-        verify { charactersObserverDetail.onChanged(any()) }
-    }
 }
